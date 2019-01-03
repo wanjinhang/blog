@@ -11,5 +11,8 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
+    $router->get('teachers','TeachersController@index');
+    $router->get('teachers/create', 'TeachersController@create');
+    $router->post('products', 'TeachersController@store');
 
 });
