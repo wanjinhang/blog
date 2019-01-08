@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Teacher;
+use App\Models\Course;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class TeachersController extends Controller
+class CoursesController extends Controller
 {
     use HasResourceActions;
 
@@ -23,7 +23,7 @@ class TeachersController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
+            ->header('课程管理')
             ->description('description')
             ->body($this->grid());
     }
@@ -67,7 +67,7 @@ class TeachersController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('教师列表')
+            ->header('Create')
             ->description('description')
             ->body($this->form());
     }
@@ -79,16 +79,13 @@ class TeachersController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Teacher);
+        $grid = new Grid(new Course);
 
-        $grid->id('编号');
-        $grid->username('姓名');
-        $grid->sex('性别');
-        $grid->phone('电话');
-        $grid->college('所属学院');
-        $grid->job_title('职称');
-        $grid->content('备注');
-
+        $grid->id('课程编号');
+        $grid->course_name('课程名称');
+        $grid->class_hour('学时');
+        $grid->credit('学分');
+        $grid->created_at('创建时间');
         return $grid;
     }
 
@@ -100,15 +97,13 @@ class TeachersController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Teacher::findOrFail($id));
+        $show = new Show(Course::findOrFail($id));
 
-        $show->id('编号');
-        $show->username('姓名');
-        $show->sex('性别');
-        $show->phone('电话');
-        $show->college('所在学院');
-        $show->job_title('职称');
-        $show->content('备注');
+        $show->id('课程编号');
+        $show->course_name('课程名称');
+        $show->class_hour('学时');
+        $show->credit('学分');
+        $show->created_at('创建时间');
         $show->updated_at('更新时间');
 
         return $show;
@@ -121,21 +116,12 @@ class TeachersController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Teacher);
+        $form = new Form(new Course);
 
-        $form->text('username', '姓名');
-        $form->password('password', '密码');
-        $form->select('sex','性别')->options([1 => '男', 2 => '女']);
-        $form->text('college', '所在学院');
-        $form->text('job_title', '职称');
-        $form->text('content', '研究方向');
-        $form->mobile('phone', '电话');
+        $form->text('course_name', '课程名称');
+        $form->text('class_hour', '学时');
+        $form->text('credit', '学分');
 
         return $form;
-    }
-
-    public function store()
-    {
-        return $this->form()->store();
     }
 }
