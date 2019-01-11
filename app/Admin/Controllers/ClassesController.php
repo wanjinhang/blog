@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Grade;
+use App\Models\Classes;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class GradesController extends Controller
+class ClassesController extends Controller
 {
     use HasResourceActions;
 
@@ -79,11 +79,11 @@ class GradesController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Grade);
+        $grid = new Grid(new Classes);
 
         $grid->id('Id');
-        $grid->grade_name('学院名');
-        $grid->phone('联系电话');
+        $grid->class_name('班级名');
+        $grid->grade_name('所在学院');
 
         return $grid;
     }
@@ -96,13 +96,11 @@ class GradesController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Grade::findOrFail($id));
+        $show = new Show(Classes::findOrFail($id));
 
         $show->id('Id');
-        $show->grade_name('Grade name');
-        $show->phone('Phone');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
+        $show->class_name('班级名');
+        $grid->grade_name('所在学院');
 
         return $show;
     }
@@ -114,11 +112,11 @@ class GradesController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Grade);
+        $form = new Form(new Classes);
 
-        $form->text('grade_name', 'Grade name');
-        $form->mobile('phone', 'Phone');
-
+        $form->text('class_name', 'Class name');
+        $form->select('grade_id')->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
+        $form->select('grade_name');
         return $form;
     }
 }
