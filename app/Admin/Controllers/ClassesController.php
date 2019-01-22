@@ -9,6 +9,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use App\Models\College;
 
 class ClassesController extends Controller
 {
@@ -83,8 +84,8 @@ class ClassesController extends Controller
 
         $grid->id('Id');
         $grid->class_name('班级名');
-        $grid->grade_name('所在学院');
-
+        $grid->college()->college_name('所在学院');
+        $grid->num('人数');
         return $grid;
     }
 
@@ -100,8 +101,8 @@ class ClassesController extends Controller
 
         $show->id('Id');
         $show->class_name('班级名');
-        $grid->grade_name('所在学院');
-
+        $grid->college_id('所在学院');
+        $grid->num('人数');
         return $show;
     }
 
@@ -113,10 +114,10 @@ class ClassesController extends Controller
     protected function form()
     {
         $form = new Form(new Classes);
-
+        $college = new College();
         $form->text('class_name', 'Class name');
-        $form->select('grade_id')->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
-        $form->select('grade_name');
+        $form->select('college_id')->options($college->getCollegeName());
+        $form->text('num');
         return $form;
     }
 }

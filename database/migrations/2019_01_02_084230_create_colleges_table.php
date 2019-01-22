@@ -13,9 +13,9 @@ class CreateGradesTable extends Migration
      */
     public function up()
     {
-        Schema::create('grades', function (Blueprint $table) {
+        Schema::create('colleges', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('grade_name')->comment('学院名称');
+            $table->string('college_name')->comment('学院名称');
             $table->string('phone')->comment('联系电话');
             $table->timestamps();
         });

@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Grade;
+use App\Models\TeachingWork;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class GradesController extends Controller
+class TeachingWorksController extends Controller
 {
     use HasResourceActions;
 
@@ -79,11 +79,18 @@ class GradesController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Grade);
+        $grid = new Grid(new TeachingWork);
 
         $grid->id('Id');
-        $grid->grade_name('学院名');
-        $grid->phone('联系电话');
+        $grid->coures_id('Coures id');
+        $grid->class_name('Class name');
+        $grid->teacher_id('Teacher id');
+        $grid->start_time('Start time');
+        $grid->type('Type');
+        $grid->duration('Duration');
+        $grid->remark('Remark');
+        $grid->created_at('Created at');
+        $grid->updated_at('Updated at');
 
         return $grid;
     }
@@ -96,11 +103,16 @@ class GradesController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Grade::findOrFail($id));
+        $show = new Show(TeachingWork::findOrFail($id));
 
         $show->id('Id');
-        $show->grade_name('Grade name');
-        $show->phone('Phone');
+        $show->coures_id('Coures id');
+        $show->class_name('Class name');
+        $show->teacher_id('Teacher id');
+        $show->start_time('Start time');
+        $show->type('Type');
+        $show->duration('Duration');
+        $show->remark('Remark');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -114,10 +126,15 @@ class GradesController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Grade);
+        $form = new Form(new TeachingWork);
 
-        $form->text('grade_name', 'Grade name');
-        $form->mobile('phone', 'Phone');
+        $form->text('coures_id', 'Coures id');
+        $form->text('class_name', 'Class name');
+        $form->text('teacher_id', 'Teacher id');
+        $form->text('start_time', 'Start time');
+        $form->text('type', 'Type');
+        $form->text('duration', 'Duration');
+        $form->text('remark', 'Remark');
 
         return $form;
     }

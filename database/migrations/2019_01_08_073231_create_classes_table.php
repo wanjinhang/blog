@@ -16,8 +16,8 @@ class CreateClassesTable extends Migration
         Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('class_name')->comment('班级名称');
-            $table->string('grade_id')->comment('所属学院编号');
-            $table->string('grade_name')->comment('所属学院名称');
+            $table->string('college_id')->comment('学院id');
+            $table->string('num')->comment('人数');
             $table->timestamps();
         });
     }
