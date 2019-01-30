@@ -87,7 +87,6 @@ class TeachersController extends Controller
             return $sex ? '男' : '女';
         });
         $grid->phone('电话');
-        $grid->college('所属学院');
         $grid->job_title('职称');
         $grid->content('备注');
 
@@ -110,7 +109,6 @@ class TeachersController extends Controller
             return $sex ? '男' : '女';
         });
         $show->phone('电话');
-        $show->college('所在学院');
         $show->job_title('职称');
         $show->content('备注');
         $show->updated_at('更新时间');
@@ -130,7 +128,6 @@ class TeachersController extends Controller
         $form->text('username', '姓名');
         $form->password('password', '密码');
         $form->select('sex','性别')->options([1 => '男', 0 => '女']);
-        $form->text('college', '所在学院');
         $form->text('job_title', '职称');
         $form->text('content', '研究方向');
         $form->mobile('phone', '电话');

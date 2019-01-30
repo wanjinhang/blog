@@ -15,13 +15,11 @@ class CreateTeachingWorksTable extends Migration
     {
         Schema::create('teaching_works', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('coures_id')->comment('课程编号');
-            $table->string('class_name')->comment('班级名称');
+            $table->string('course_id')->comment('课程编号');
+            $table->string('classes_id')->comment('班级编号');
             $table->string('teacher_id')->comment('教师编号');
             $table->string('start_time')->comment('开课时间');
-            $table->string('type')->comment('课程类型');
-            $table->string('duration')->comment('学时');
-            $table->string('remark')->comment('备注');
+            $table->string('remark')->comment('备注')->nullable();
             $table->timestamps();
         });
     }

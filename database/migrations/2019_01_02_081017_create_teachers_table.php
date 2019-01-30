@@ -18,7 +18,6 @@ class CreateTeachersTable extends Migration
             $table->string('username')->comment('教师姓名');
             $table->string('password')->comment('登录密码');
             $table->string('sex')->comment('性别');
-            $table->string('college')->comment('学院名称');
             $table->string('job_title')->comment('职称');
             $table->string('content')->comment('备注/研究方向');
             $table->string('phone')->comment('联系电话');

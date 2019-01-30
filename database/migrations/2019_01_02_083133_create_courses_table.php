@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('course_name')->comment('课程名称');
             $table->string('class_hour')->comment('学时');
             $table->string('credit')->comment('学分');
+            $table->string('type')->comment('类型');
             $table->timestamps();
         });
     }

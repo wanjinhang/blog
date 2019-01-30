@@ -14,7 +14,9 @@ Route::group([
 
     Route::resource('teachers', 'TeachersController');
     Route::resource('courses', 'CoursesController');
-    Route::resource('grades', 'GradesController');
+    Route::resource('colleges', 'CollegesController');
     Route::resource('classes', 'ClassesController');
     Route::resource('teachingWorks', 'TeachingWorksController');
+    Route::resource('scienceWorks', 'ScienceWorksController');
 });
+
