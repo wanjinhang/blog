@@ -19,6 +19,7 @@ class CreateTeachingWorksTable extends Migration
             $table->string('classes_id')->comment('班级编号');
             $table->string('teacher_id')->comment('教师编号');
             $table->string('start_time')->comment('开课时间');
+            $table->string('end_time')->comment('结课时间');
             $table->string('remark')->comment('备注')->nullable();
             $table->timestamps();
         });

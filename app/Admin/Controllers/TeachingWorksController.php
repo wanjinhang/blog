@@ -89,6 +89,7 @@ class TeachingWorksController extends Controller
         $grid->course()->course_name('课程名称');
         $grid->teacher()->username('教师名称');
         $grid->start_time('开课时间');
+        $grid->end_time('结课时间');
         $grid->course()->class_hour('学时');
         $grid->course()->credit('学分');
         $grid->remark('备注');
@@ -111,6 +112,7 @@ class TeachingWorksController extends Controller
         $show->class_name('Class name');
         $show->teacher_id('Teacher id');
         $show->start_time('Start time');
+        $show->end_time('Start time');
         $show->type('Type');
         $show->duration('Duration');
         $show->remark('Remark');
@@ -135,6 +137,7 @@ class TeachingWorksController extends Controller
         $form->select('class_id','班级名称')->options($classes->getClassesName());
         $form->select('teacher_id','教师名称')->options($teacher->getTeacherName());
         $form->datetime('start_time', '开课时间');
+        $form->datetime('end_time', '结课时间');
         $form->text('remark', '备注');
 
         return $form;

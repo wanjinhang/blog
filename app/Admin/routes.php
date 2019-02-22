@@ -18,5 +18,6 @@ Route::group([
     Route::resource('classes', 'ClassesController');
     Route::resource('teachingWorks', 'TeachingWorksController');
     Route::resource('scienceWorks', 'ScienceWorksController');
+    Route::resource('tongjis','TongJiController');
 });
 
