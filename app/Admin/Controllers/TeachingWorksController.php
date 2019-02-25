@@ -133,8 +133,8 @@ class TeachingWorksController extends Controller
         $classes = new Classes();
         $teacher = new Teacher();
         $course = new Course();
-        $form->select('coures_id','课程名称')->options($course->getCourseName());
-        $form->select('class_id','班级名称')->options($classes->getClassesName());
+        $form->select('course_id','课程名称')->options($course->getCourseName());
+        $form->select('classes_id','班级名称')->options($classes->getClassesName());
         $form->select('teacher_id','教师名称')->options($teacher->getTeacherName());
         $form->datetime('start_time', '开课时间');
         $form->datetime('end_time', '结课时间');

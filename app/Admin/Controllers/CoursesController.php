@@ -85,6 +85,7 @@ class CoursesController extends Controller
         $grid->course_name('课程名称');
         $grid->class_hour('学时');
         $grid->credit('学分');
+        $grid->type('课程类型');
         $grid->created_at('创建时间');
         return $grid;
     }
@@ -103,6 +104,7 @@ class CoursesController extends Controller
         $show->course_name('课程名称');
         $show->class_hour('学时');
         $show->credit('学分');
+        $show->type('课程类型');
         $show->created_at('创建时间');
         $show->updated_at('更新时间');
 
@@ -121,7 +123,7 @@ class CoursesController extends Controller
         $form->text('course_name', '课程名称');
         $form->text('class_hour', '学时');
         $form->text('credit', '学分');
-
+        $form->select('type','课程类型')->options(['实践课'=>'实践课','理论课'=>'理论课']);
         return $form;
     }
 }
