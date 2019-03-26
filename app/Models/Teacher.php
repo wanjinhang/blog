@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Course;
 use App\Models\TeachingWork;
-use App\Models\ScienceWork;
+use Illuminate\Notifications\Notifiable;
 
-class Teacher extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Teacher extends Authenticatable
 {
+    use Notifiable;
+
     public function course(){
         return $this->hasMany(Course::class);
     }
@@ -20,15 +23,15 @@ class Teacher extends Model
 
     public function scienceWorks()
     {
-        return $this->hasMany(Science::class);
+        return $this->hasMany(ScienceWork::class);
     }
 
     public function getTeacherName()
     {
-        $res = $this->get(['id','username'])->toArray();
+        $res = $this->get(['id','name'])->toArray();
         $arr;
         foreach ($res as $key => $value) {
-            $arr[$value['id']] = $value['username'];
+            $arr[$value['id']] = $value['name'];
         }
         return $arr;
     }

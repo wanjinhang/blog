@@ -21,7 +21,7 @@ class CreateScienceWorksTable extends Migration
             $table->string('award')->comment('获奖情况');
             $table->string('year')->comment('年份');
             $table->string('teacher_id')->comment('所属人员');
-            $table->string('remake')->comment('备注');
+            $table->string('remark')->comment('备注');
             $table->timestamps();
         });
     }

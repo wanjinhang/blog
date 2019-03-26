@@ -24,7 +24,7 @@ class ClassesController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
+            ->header('课程列表')
             ->description('description')
             ->body($this->grid());
     }
@@ -39,7 +39,7 @@ class ClassesController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
+            ->header('课程信息')
             ->description('description')
             ->body($this->detail($id));
     }
@@ -54,7 +54,7 @@ class ClassesController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
+            ->header('修改课程')
             ->description('description')
             ->body($this->form()->edit($id));
     }
@@ -68,7 +68,7 @@ class ClassesController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
+            ->header('创建课程')
             ->description('description')
             ->body($this->form());
     }
@@ -82,7 +82,7 @@ class ClassesController extends Controller
     {
         $grid = new Grid(new Classes);
 
-        $grid->id('Id');
+        $grid->id('编号');
         $grid->class_name('班级名');
         $grid->college()->college_name('所在学院');
         $grid->num('人数');
@@ -99,7 +99,7 @@ class ClassesController extends Controller
     {
         $show = new Show(Classes::findOrFail($id));
 
-        $show->id('Id');
+        $show->id('编号');
         $show->class_name('班级名');
         $grid->college_id('所在学院');
         $grid->num('人数');
@@ -115,7 +115,7 @@ class ClassesController extends Controller
     {
         $form = new Form(new Classes);
         $college = new College();
-        $form->text('class_name', 'Class name');
+        $form->text('class_name', '班级名称');
         $form->select('college_id')->options($college->getCollegeName());
         $form->text('num');
         return $form;

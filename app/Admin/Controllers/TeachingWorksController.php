@@ -26,7 +26,7 @@ class TeachingWorksController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
+            ->header('教学工作量')
             ->description('description')
             ->body($this->grid());
     }
@@ -84,10 +84,10 @@ class TeachingWorksController extends Controller
     {
         $grid = new Grid(new TeachingWork);
 
-        $grid->id('Id');
+        $grid->id('编号');
         $grid->classes()->class_name('班级名称');
         $grid->course()->course_name('课程名称');
-        $grid->teacher()->username('教师名称');
+        $grid->teacher()->name('教师名称');
         $grid->start_time('开课时间');
         $grid->end_time('结课时间');
         $grid->course()->class_hour('学时');
@@ -106,18 +106,20 @@ class TeachingWorksController extends Controller
     protected function detail($id)
     {
         $show = new Show(TeachingWork::findOrFail($id));
-
-        $show->id('Id');
-        $show->coures_id('Coures id');
-        $show->class_name('Class name');
-        $show->teacher_id('Teacher id');
-        $show->start_time('Start time');
-        $show->end_time('Start time');
-        $show->type('Type');
-        $show->duration('Duration');
-        $show->remark('Remark');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
+        $classes = new Classes();
+        $teacher = new Teacher();
+        $course = new Course();
+        $show->id('编号');
+        $show->select('course_id','课程名称')->options($course->getCourseName());
+        $show->select('classes_id','班级名称')->options($classes->getClassesName());
+        $show->select('teacher_id','教师名称')->options($teacher->getTeacherName());
+        $show->start_time('开课时间');
+        $show->end_time('结课时间');
+        $show->type('课程类型');
+        $show->duration('学时');
+        $show->remark('备注');
+        $show->created_at('创建时间');
+        $show->updated_at('更新时间');
 
         return $show;
     }

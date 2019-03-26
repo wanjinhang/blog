@@ -81,7 +81,7 @@ class CollegesController extends Controller
     {
         $grid = new Grid(new college);
 
-        $grid->id('Id');
+        $grid->id('编号');
         $grid->college_name('学院名');
         $grid->phone('联系电话');
 
@@ -98,11 +98,11 @@ class CollegesController extends Controller
     {
         $show = new Show(college::findOrFail($id));
 
-        $show->id('Id');
-        $show->college_name('college name');
-        $show->phone('Phone');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
+        $show->id('编号');
+        $show->college_name('学院名');
+        $show->phone('联系电话');
+        $show->created_at('创建时间');
+        $show->updated_at('更新时间');
 
         return $show;
     }
@@ -116,8 +116,8 @@ class CollegesController extends Controller
     {
         $form = new Form(new college);
 
-        $form->text('college_name', 'college name');
-        $form->mobile('phone', 'Phone');
+        $form->text('college_name', '学院名');
+        $form->mobile('phone', '联系电话');
 
         return $form;
     }

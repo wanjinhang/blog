@@ -11,4 +11,11 @@
 |
 */
 
-Route::redirect('/', '/admin', 301);
+Route::redirect('/', '/home', 301);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('scienceWorks', 'ScienceWorkController@index')->name('scienceWorks')->middleware('auth');
+
+Route::resource('teachingWork', 'TeachingWorkController')->middleware('auth');
+Route::get('tongji', 'TongJiController@index')->name('tongji')->middleware('auth');

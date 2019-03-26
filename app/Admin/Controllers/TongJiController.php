@@ -39,7 +39,7 @@ class TongJiController extends Controller
         $grid = new Grid(new Test());
 
         $grid->id('编号');
-        $grid->username('教师姓名');
+        $grid->name('教师姓名');
         $grid->work_point('教学分数');
         $grid->science_point('科研分数');
         $grid->disableCreateButton();

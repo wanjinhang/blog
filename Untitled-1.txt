@@ -1,0 +1,22 @@
+PHP   主要开发语言
+    Laravel   -- PHP框架 
+    composer  -- PHP包管理工具
+
+HTML5   超文本标记语言 
+
+CSS3   层叠样式表   （负责美化HTML）
+            SCSS   是一个 CSS3 语法的扩充版本
+
+
+JavaScript    是一种脚本 (负责交互)
+        NPM  javacript的包管理工具
+
+
+Git   文件版本控制系统
+
+MySQL   数据库
+        Navicat  数据库管理软件
+
+Laragon  是php 的运行开发环境
+
+Visual Studio code 是文件编辑工具

@@ -122,7 +122,7 @@ class ScienceWorksController extends Controller
             }
         });;
         $grid->year('所属年份');
-        $grid->teacher()->username('教师名称');
+        $grid->teacher()->name('教师名称');
         $grid->remake('备注');
 
         return $grid;
@@ -144,8 +144,8 @@ class ScienceWorksController extends Controller
         $show->level('等级');
         $show->award('获奖等级');
         $show->year('所属年份');
-        $show->teacher_id('Teacher id');
-        $show->remake('Remake');
+        $show->teacher()->name('教师名称');
+        $show->remake('备注');
 
         return $show;
     }

@@ -15,7 +15,8 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->increments('id')->comment('教师编号');
-            $table->string('username')->comment('教师姓名');
+            $table->string('name')->comment('教师姓名');
+            $table->string('email')->comment('邮箱');
             $table->string('password')->comment('登录密码');
             $table->string('sex')->comment('性别');
             $table->string('job_title')->comment('职称');

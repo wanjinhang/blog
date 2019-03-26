@@ -27,7 +27,7 @@ class Test extends Model
         courses.class_hour,
         courses.credit,
         courses.type,
-        teachers.username,
+        teachers.name,
         classes.class_name,
         classes.num
         FROM

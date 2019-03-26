@@ -23,7 +23,7 @@ class TeachersController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
+            ->header('教师列表')
             ->description('description')
             ->body($this->grid());
     }
@@ -38,7 +38,7 @@ class TeachersController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
+            ->header('教师信息')
             ->description('description')
             ->body($this->detail($id));
     }
@@ -53,7 +53,7 @@ class TeachersController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
+            ->header('信息修改')
             ->description('description')
             ->body($this->form()->edit($id));
     }
@@ -82,7 +82,8 @@ class TeachersController extends Controller
         $grid = new Grid(new Teacher);
 
         $grid->id('编号');
-        $grid->username('姓名');
+        $grid->name('教师姓名');
+        $grid->email('邮箱');
         $grid->sex('性别')->display(function($sex){
             return $sex ? '男' : '女';
         });
@@ -104,7 +105,8 @@ class TeachersController extends Controller
         $show = new Show(Teacher::findOrFail($id));
 
         $show->id('编号');
-        $show->username('姓名');
+        $show->name('教师姓名');
+        $show->email('邮箱');
         $show->sex('性别')->display(function($sex){
             return $sex ? '男' : '女';
         });
@@ -124,14 +126,18 @@ class TeachersController extends Controller
     protected function form()
     {
         $form = new Form(new Teacher);
-
-        $form->text('username', '姓名');
+        $form->text('name', '教师姓名');
+        $form->text('email', '邮箱');
         $form->password('password', '密码');
         $form->select('sex','性别')->options([1 => '男', 0 => '女']);
         $form->text('job_title', '职称');
         $form->text('content', '研究方向');
         $form->mobile('phone', '电话');
-
+        $form->saving(function (Form $form) {
+            if ($form->password && $form->model()->password != $form->password) {
+                $form->password = bcrypt($form->password);
+            }
+        });
         return $form;
     }
 
