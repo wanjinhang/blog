@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 25/02/2019 14:48:32
+ Date: 26/03/2019 15:45:35
 */
 
 SET NAMES utf8mb4;
@@ -67,7 +67,7 @@ CREATE TABLE `admin_operation_log`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `admin_operation_log_user_id_index`(`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 804 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 957 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -875,6 +875,159 @@ INSERT INTO `admin_operation_log` VALUES (800, 1, 'admin/teachingWorks/2', 'GET'
 INSERT INTO `admin_operation_log` VALUES (801, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 06:46:34', '2019-02-25 06:46:34');
 INSERT INTO `admin_operation_log` VALUES (802, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 06:46:37', '2019-02-25 06:46:37');
 INSERT INTO `admin_operation_log` VALUES (803, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 06:46:39', '2019-02-25 06:46:39');
+INSERT INTO `admin_operation_log` VALUES (804, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:04:34', '2019-02-25 07:04:34');
+INSERT INTO `admin_operation_log` VALUES (805, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\",\"_export_\":\"all\"}', '2019-02-25 07:05:52', '2019-02-25 07:05:52');
+INSERT INTO `admin_operation_log` VALUES (806, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:06:49', '2019-02-25 07:06:49');
+INSERT INTO `admin_operation_log` VALUES (807, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:36', '2019-02-25 07:08:36');
+INSERT INTO `admin_operation_log` VALUES (808, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:39', '2019-02-25 07:08:39');
+INSERT INTO `admin_operation_log` VALUES (809, 1, 'admin/colleges/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:42', '2019-02-25 07:08:42');
+INSERT INTO `admin_operation_log` VALUES (810, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:46', '2019-02-25 07:08:46');
+INSERT INTO `admin_operation_log` VALUES (811, 1, 'admin/colleges/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:49', '2019-02-25 07:08:49');
+INSERT INTO `admin_operation_log` VALUES (812, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:51', '2019-02-25 07:08:51');
+INSERT INTO `admin_operation_log` VALUES (813, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:08:53', '2019-02-25 07:08:53');
+INSERT INTO `admin_operation_log` VALUES (814, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:01', '2019-02-25 07:09:01');
+INSERT INTO `admin_operation_log` VALUES (815, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:09', '2019-02-25 07:09:09');
+INSERT INTO `admin_operation_log` VALUES (816, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:16', '2019-02-25 07:09:16');
+INSERT INTO `admin_operation_log` VALUES (817, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:17', '2019-02-25 07:09:17');
+INSERT INTO `admin_operation_log` VALUES (818, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:24', '2019-02-25 07:09:24');
+INSERT INTO `admin_operation_log` VALUES (819, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:31', '2019-02-25 07:09:31');
+INSERT INTO `admin_operation_log` VALUES (820, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:44', '2019-02-25 07:09:44');
+INSERT INTO `admin_operation_log` VALUES (821, 1, 'admin/scienceWorks/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:47', '2019-02-25 07:09:47');
+INSERT INTO `admin_operation_log` VALUES (822, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:55', '2019-02-25 07:09:55');
+INSERT INTO `admin_operation_log` VALUES (823, 1, 'admin/teachingWorks/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:09:57', '2019-02-25 07:09:57');
+INSERT INTO `admin_operation_log` VALUES (824, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:04', '2019-02-25 07:10:04');
+INSERT INTO `admin_operation_log` VALUES (825, 1, 'admin/courses/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:06', '2019-02-25 07:10:06');
+INSERT INTO `admin_operation_log` VALUES (826, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:15', '2019-02-25 07:10:15');
+INSERT INTO `admin_operation_log` VALUES (827, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:17', '2019-02-25 07:10:17');
+INSERT INTO `admin_operation_log` VALUES (828, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:23', '2019-02-25 07:10:23');
+INSERT INTO `admin_operation_log` VALUES (829, 1, 'admin/classes/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-02-25 07:10:25', '2019-02-25 07:10:25');
+INSERT INTO `admin_operation_log` VALUES (830, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-12 02:45:02', '2019-03-12 02:45:02');
+INSERT INTO `admin_operation_log` VALUES (831, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-19 00:08:27', '2019-03-19 00:08:27');
+INSERT INTO `admin_operation_log` VALUES (832, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 00:20:05', '2019-03-19 00:20:05');
+INSERT INTO `admin_operation_log` VALUES (833, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 00:20:42', '2019-03-19 00:20:42');
+INSERT INTO `admin_operation_log` VALUES (834, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 00:21:07', '2019-03-19 00:21:07');
+INSERT INTO `admin_operation_log` VALUES (835, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 00:27:39', '2019-03-19 00:27:39');
+INSERT INTO `admin_operation_log` VALUES (836, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2019-03-19 01:17:56', '2019-03-19 01:17:56');
+INSERT INTO `admin_operation_log` VALUES (837, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-19 02:42:49', '2019-03-19 02:42:49');
+INSERT INTO `admin_operation_log` VALUES (838, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-19 02:42:49', '2019-03-19 02:42:49');
+INSERT INTO `admin_operation_log` VALUES (839, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:44:51', '2019-03-19 02:44:51');
+INSERT INTO `admin_operation_log` VALUES (840, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 02:45:11', '2019-03-19 02:45:11');
+INSERT INTO `admin_operation_log` VALUES (841, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 02:47:21', '2019-03-19 02:47:21');
+INSERT INTO `admin_operation_log` VALUES (842, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:47:31', '2019-03-19 02:47:31');
+INSERT INTO `admin_operation_log` VALUES (843, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:47:38', '2019-03-19 02:47:38');
+INSERT INTO `admin_operation_log` VALUES (844, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:47:44', '2019-03-19 02:47:44');
+INSERT INTO `admin_operation_log` VALUES (845, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '[]', '2019-03-19 02:48:15', '2019-03-19 02:48:15');
+INSERT INTO `admin_operation_log` VALUES (846, 1, 'admin/teachers/1', 'PUT', '127.0.0.1', '{\"name\":\"\\u4e07\\u5c0f\\u578b\",\"email\":\"wansui@qq.com\",\"password\":\"123456\",\"sex\":\"1\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"php\",\"phone\":\"15844460823\",\"_token\":\"wDIlVXzupPPJYLCSsFIDrr0NYuhpU9OCGRVtflQL\",\"_method\":\"PUT\"}', '2019-03-19 02:48:35', '2019-03-19 02:48:35');
+INSERT INTO `admin_operation_log` VALUES (847, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '[]', '2019-03-19 02:48:36', '2019-03-19 02:48:36');
+INSERT INTO `admin_operation_log` VALUES (848, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:58:55', '2019-03-19 02:58:55');
+INSERT INTO `admin_operation_log` VALUES (849, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:59:00', '2019-03-19 02:59:00');
+INSERT INTO `admin_operation_log` VALUES (850, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 02:59:04', '2019-03-19 02:59:04');
+INSERT INTO `admin_operation_log` VALUES (851, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"name\":\"\\u4e07\\u71e7\",\"email\":\"123@qq.com\",\"password\":\"123456\",\"sex\":\"0\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"python\",\"phone\":\"15844460823\",\"_token\":\"wDIlVXzupPPJYLCSsFIDrr0NYuhpU9OCGRVtflQL\",\"_previous_\":\"http:\\/\\/blog.test\\/admin\\/teachers\"}', '2019-03-19 02:59:52', '2019-03-19 02:59:52');
+INSERT INTO `admin_operation_log` VALUES (852, 1, 'admin/teachers/create', 'GET', '127.0.0.1', '[]', '2019-03-19 02:59:52', '2019-03-19 02:59:52');
+INSERT INTO `admin_operation_log` VALUES (853, 1, 'admin/teachers', 'POST', '127.0.0.1', '{\"name\":\"\\u4e07\\u71e7\",\"email\":\"123@qq.com\",\"password\":\"123456\",\"sex\":\"0\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"python\",\"phone\":\"15844460823\",\"_token\":\"wDIlVXzupPPJYLCSsFIDrr0NYuhpU9OCGRVtflQL\"}', '2019-03-19 03:00:16', '2019-03-19 03:00:16');
+INSERT INTO `admin_operation_log` VALUES (854, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 03:00:17', '2019-03-19 03:00:17');
+INSERT INTO `admin_operation_log` VALUES (855, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-19 03:06:13', '2019-03-19 03:06:13');
+INSERT INTO `admin_operation_log` VALUES (856, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:06:43', '2019-03-19 03:06:43');
+INSERT INTO `admin_operation_log` VALUES (857, 1, 'admin/teachers/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:06:47', '2019-03-19 03:06:47');
+INSERT INTO `admin_operation_log` VALUES (858, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:06:59', '2019-03-19 03:06:59');
+INSERT INTO `admin_operation_log` VALUES (859, 1, 'admin/teachers/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:07:01', '2019-03-19 03:07:01');
+INSERT INTO `admin_operation_log` VALUES (860, 1, 'admin/teachers/2', 'PUT', '127.0.0.1', '{\"name\":\"\\u90ed\\u5c0f\\u9e4f\",\"email\":\"guopeng@qq.com\",\"password\":\"123456\",\"sex\":\"1\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"java\",\"phone\":\"15844460823\",\"_token\":\"MVryh12QY2kgd8IOfw4h4FhtLJA5ov0Cm8YG3dyh\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/blog.test\\/admin\\/teachers\"}', '2019-03-19 03:07:20', '2019-03-19 03:07:20');
+INSERT INTO `admin_operation_log` VALUES (861, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 03:07:21', '2019-03-19 03:07:21');
+INSERT INTO `admin_operation_log` VALUES (862, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:07:38', '2019-03-19 03:07:38');
+INSERT INTO `admin_operation_log` VALUES (863, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:07:43', '2019-03-19 03:07:43');
+INSERT INTO `admin_operation_log` VALUES (864, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:07:45', '2019-03-19 03:07:45');
+INSERT INTO `admin_operation_log` VALUES (865, 1, 'admin/teachers/1', 'PUT', '127.0.0.1', '{\"name\":\"\\u4e07\\u5c0f\\u578b\",\"email\":\"wanxx@qq.com\",\"password\":\"123456\",\"sex\":\"1\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"php\",\"phone\":\"15844460823\",\"_token\":\"MVryh12QY2kgd8IOfw4h4FhtLJA5ov0Cm8YG3dyh\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/blog.test\\/admin\\/teachers\"}', '2019-03-19 03:07:59', '2019-03-19 03:07:59');
+INSERT INTO `admin_operation_log` VALUES (866, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 03:07:59', '2019-03-19 03:07:59');
+INSERT INTO `admin_operation_log` VALUES (867, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-19 03:21:08', '2019-03-19 03:21:08');
+INSERT INTO `admin_operation_log` VALUES (868, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:11', '2019-03-19 03:21:11');
+INSERT INTO `admin_operation_log` VALUES (869, 1, 'admin/classes/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:14', '2019-03-19 03:21:14');
+INSERT INTO `admin_operation_log` VALUES (870, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:17', '2019-03-19 03:21:17');
+INSERT INTO `admin_operation_log` VALUES (871, 1, 'admin/courses/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:19', '2019-03-19 03:21:19');
+INSERT INTO `admin_operation_log` VALUES (872, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:22', '2019-03-19 03:21:22');
+INSERT INTO `admin_operation_log` VALUES (873, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:25', '2019-03-19 03:21:25');
+INSERT INTO `admin_operation_log` VALUES (874, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '[]', '2019-03-19 03:21:26', '2019-03-19 03:21:26');
+INSERT INTO `admin_operation_log` VALUES (875, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:32', '2019-03-19 03:21:32');
+INSERT INTO `admin_operation_log` VALUES (876, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:21:34', '2019-03-19 03:21:34');
+INSERT INTO `admin_operation_log` VALUES (877, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '[]', '2019-03-19 03:21:35', '2019-03-19 03:21:35');
+INSERT INTO `admin_operation_log` VALUES (878, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:22:07', '2019-03-19 03:22:07');
+INSERT INTO `admin_operation_log` VALUES (879, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:22:11', '2019-03-19 03:22:11');
+INSERT INTO `admin_operation_log` VALUES (880, 1, 'admin/scienceWorks/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:22:13', '2019-03-19 03:22:13');
+INSERT INTO `admin_operation_log` VALUES (881, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:22:18', '2019-03-19 03:22:18');
+INSERT INTO `admin_operation_log` VALUES (882, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:49:30', '2019-03-19 03:49:30');
+INSERT INTO `admin_operation_log` VALUES (883, 1, 'admin/tongjis', 'GET', '127.0.0.1', '[]', '2019-03-19 03:49:34', '2019-03-19 03:49:34');
+INSERT INTO `admin_operation_log` VALUES (884, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:49:40', '2019-03-19 03:49:40');
+INSERT INTO `admin_operation_log` VALUES (885, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:50:23', '2019-03-19 03:50:23');
+INSERT INTO `admin_operation_log` VALUES (886, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:50:35', '2019-03-19 03:50:35');
+INSERT INTO `admin_operation_log` VALUES (887, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 03:50:38', '2019-03-19 03:50:38');
+INSERT INTO `admin_operation_log` VALUES (888, 1, 'admin/tongjis', 'GET', '127.0.0.1', '[]', '2019-03-19 03:56:52', '2019-03-19 03:56:52');
+INSERT INTO `admin_operation_log` VALUES (889, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:35:29', '2019-03-19 05:35:29');
+INSERT INTO `admin_operation_log` VALUES (890, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:35:31', '2019-03-19 05:35:31');
+INSERT INTO `admin_operation_log` VALUES (891, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:35:36', '2019-03-19 05:35:36');
+INSERT INTO `admin_operation_log` VALUES (892, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:37:12', '2019-03-19 05:37:12');
+INSERT INTO `admin_operation_log` VALUES (893, 1, 'admin/colleges/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:37:15', '2019-03-19 05:37:15');
+INSERT INTO `admin_operation_log` VALUES (894, 1, 'admin/colleges/1/edit', 'GET', '127.0.0.1', '[]', '2019-03-19 05:39:04', '2019-03-19 05:39:04');
+INSERT INTO `admin_operation_log` VALUES (895, 1, 'admin/colleges', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:39:50', '2019-03-19 05:39:50');
+INSERT INTO `admin_operation_log` VALUES (896, 1, 'admin/colleges/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:39:54', '2019-03-19 05:39:54');
+INSERT INTO `admin_operation_log` VALUES (897, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:39:57', '2019-03-19 05:39:57');
+INSERT INTO `admin_operation_log` VALUES (898, 1, 'admin/classes', 'GET', '127.0.0.1', '[]', '2019-03-19 05:43:25', '2019-03-19 05:43:25');
+INSERT INTO `admin_operation_log` VALUES (899, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:13', '2019-03-19 05:51:13');
+INSERT INTO `admin_operation_log` VALUES (900, 1, 'admin/classes/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:17', '2019-03-19 05:51:17');
+INSERT INTO `admin_operation_log` VALUES (901, 1, 'admin/classes', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:19', '2019-03-19 05:51:19');
+INSERT INTO `admin_operation_log` VALUES (902, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:20', '2019-03-19 05:51:20');
+INSERT INTO `admin_operation_log` VALUES (903, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:23', '2019-03-19 05:51:23');
+INSERT INTO `admin_operation_log` VALUES (904, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:41', '2019-03-19 05:51:41');
+INSERT INTO `admin_operation_log` VALUES (905, 1, 'admin/courses/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:50', '2019-03-19 05:51:50');
+INSERT INTO `admin_operation_log` VALUES (906, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:55', '2019-03-19 05:51:55');
+INSERT INTO `admin_operation_log` VALUES (907, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:51:58', '2019-03-19 05:51:58');
+INSERT INTO `admin_operation_log` VALUES (908, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:52:32', '2019-03-19 05:52:32');
+INSERT INTO `admin_operation_log` VALUES (909, 1, 'admin/scienceWorks/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:52:34', '2019-03-19 05:52:34');
+INSERT INTO `admin_operation_log` VALUES (910, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:52:42', '2019-03-19 05:52:42');
+INSERT INTO `admin_operation_log` VALUES (911, 1, 'admin/scienceWorks/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:53:28', '2019-03-19 05:53:28');
+INSERT INTO `admin_operation_log` VALUES (912, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:53:36', '2019-03-19 05:53:36');
+INSERT INTO `admin_operation_log` VALUES (913, 1, 'admin/scienceWorks/2', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:53:38', '2019-03-19 05:53:38');
+INSERT INTO `admin_operation_log` VALUES (914, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:57:53', '2019-03-19 05:57:53');
+INSERT INTO `admin_operation_log` VALUES (915, 1, 'admin/scienceWorks/1', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 05:57:56', '2019-03-19 05:57:56');
+INSERT INTO `admin_operation_log` VALUES (916, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-19 06:38:40', '2019-03-19 06:38:40');
+INSERT INTO `admin_operation_log` VALUES (917, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:01:33', '2019-03-19 07:01:33');
+INSERT INTO `admin_operation_log` VALUES (918, 1, 'admin/courses', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:09:38', '2019-03-19 07:09:38');
+INSERT INTO `admin_operation_log` VALUES (919, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:09:43', '2019-03-19 07:09:43');
+INSERT INTO `admin_operation_log` VALUES (920, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:09:48', '2019-03-19 07:09:48');
+INSERT INTO `admin_operation_log` VALUES (921, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:09:50', '2019-03-19 07:09:50');
+INSERT INTO `admin_operation_log` VALUES (922, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:09:53', '2019-03-19 07:09:53');
+INSERT INTO `admin_operation_log` VALUES (923, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:12:45', '2019-03-19 07:12:45');
+INSERT INTO `admin_operation_log` VALUES (924, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:12:47', '2019-03-19 07:12:47');
+INSERT INTO `admin_operation_log` VALUES (925, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:13:50', '2019-03-19 07:13:50');
+INSERT INTO `admin_operation_log` VALUES (926, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:13:56', '2019-03-19 07:13:56');
+INSERT INTO `admin_operation_log` VALUES (927, 1, 'admin/teachingWorks/2', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:13:58', '2019-03-19 07:13:58');
+INSERT INTO `admin_operation_log` VALUES (928, 1, 'admin/teachingWorks/2', 'GET', '127.0.0.1', '[]', '2019-03-19 07:16:16', '2019-03-19 07:16:16');
+INSERT INTO `admin_operation_log` VALUES (929, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '[]', '2019-03-19 07:21:27', '2019-03-19 07:21:27');
+INSERT INTO `admin_operation_log` VALUES (930, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:21:31', '2019-03-19 07:21:31');
+INSERT INTO `admin_operation_log` VALUES (931, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:21:33', '2019-03-19 07:21:33');
+INSERT INTO `admin_operation_log` VALUES (932, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:21:39', '2019-03-19 07:21:39');
+INSERT INTO `admin_operation_log` VALUES (933, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:21:42', '2019-03-19 07:21:42');
+INSERT INTO `admin_operation_log` VALUES (934, 1, 'admin/teachingWorks/2', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:21:44', '2019-03-19 07:21:44');
+INSERT INTO `admin_operation_log` VALUES (935, 1, 'admin/teachingWorks/2', 'GET', '127.0.0.1', '[]', '2019-03-19 07:22:14', '2019-03-19 07:22:14');
+INSERT INTO `admin_operation_log` VALUES (936, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:22:22', '2019-03-19 07:22:22');
+INSERT INTO `admin_operation_log` VALUES (937, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:22:27', '2019-03-19 07:22:27');
+INSERT INTO `admin_operation_log` VALUES (938, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:22:32', '2019-03-19 07:22:32');
+INSERT INTO `admin_operation_log` VALUES (939, 1, 'admin/teachingWorks/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:45:36', '2019-03-19 07:45:36');
+INSERT INTO `admin_operation_log` VALUES (940, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:57:09', '2019-03-19 07:57:09');
+INSERT INTO `admin_operation_log` VALUES (941, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:57:14', '2019-03-19 07:57:14');
+INSERT INTO `admin_operation_log` VALUES (942, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 07:57:18', '2019-03-19 07:57:18');
+INSERT INTO `admin_operation_log` VALUES (943, 1, 'admin/tongjis', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 08:03:20', '2019-03-19 08:03:20');
+INSERT INTO `admin_operation_log` VALUES (944, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-19 08:03:24', '2019-03-19 08:03:24');
+INSERT INTO `admin_operation_log` VALUES (945, 1, 'admin/tongjis', 'GET', '127.0.0.1', '[]', '2019-03-22 03:49:50', '2019-03-22 03:49:50');
+INSERT INTO `admin_operation_log` VALUES (946, 1, 'admin/teachers', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-22 03:50:32', '2019-03-22 03:50:32');
+INSERT INTO `admin_operation_log` VALUES (947, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-22 03:50:51', '2019-03-22 03:50:51');
+INSERT INTO `admin_operation_log` VALUES (948, 1, 'admin/teachers/1', 'PUT', '127.0.0.1', '{\"name\":\"\\u4e07\\u5c0f\\u578b\",\"email\":\"wanxx@qq.com\",\"password\":\"123456\",\"sex\":\"1\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"php\",\"phone\":\"15844460823\",\"_token\":\"3kmhEvCni5CjneX2HPTRv0y3F4vtDBcGxMyzIL3c\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/blog.test\\/admin\\/teachers\"}', '2019-03-22 03:50:59', '2019-03-22 03:50:59');
+INSERT INTO `admin_operation_log` VALUES (949, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-22 03:50:59', '2019-03-22 03:50:59');
+INSERT INTO `admin_operation_log` VALUES (950, 1, 'admin', 'GET', '127.0.0.1', '[]', '2019-03-22 03:51:10', '2019-03-22 03:51:10');
+INSERT INTO `admin_operation_log` VALUES (951, 1, 'admin/teachers/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-22 03:52:39', '2019-03-22 03:52:39');
+INSERT INTO `admin_operation_log` VALUES (952, 1, 'admin/teachers/1', 'PUT', '127.0.0.1', '{\"name\":\"\\u4e07\\u5c0f\\u578b\",\"email\":\"wanxx@qq.com\",\"password\":\"123456\",\"sex\":\"1\",\"job_title\":\"\\u8bb2\\u5e08\",\"content\":\"php\",\"phone\":\"15844460823\",\"_token\":\"3kmhEvCni5CjneX2HPTRv0y3F4vtDBcGxMyzIL3c\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/blog.test\\/admin\\/teachers\"}', '2019-03-22 03:52:47', '2019-03-22 03:52:47');
+INSERT INTO `admin_operation_log` VALUES (953, 1, 'admin/teachers', 'GET', '127.0.0.1', '[]', '2019-03-22 03:52:47', '2019-03-22 03:52:47');
+INSERT INTO `admin_operation_log` VALUES (954, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-22 05:36:45', '2019-03-22 05:36:45');
+INSERT INTO `admin_operation_log` VALUES (955, 1, 'admin/teachingWorks', 'GET', '127.0.0.1', '[]', '2019-03-22 05:55:29', '2019-03-22 05:55:29');
+INSERT INTO `admin_operation_log` VALUES (956, 1, 'admin/scienceWorks', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2019-03-22 08:46:53', '2019-03-22 08:46:53');
 
 -- ----------------------------
 -- Table structure for admin_permissions
@@ -1123,7 +1276,7 @@ CREATE TABLE `science_works`  (
   `award` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '获奖情况',
   `year` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '年纪',
   `teacher_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '所属人员',
-  `remake` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '备注',
+  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '备注',
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -1132,7 +1285,7 @@ CREATE TABLE `science_works`  (
 -- ----------------------------
 -- Records of science_works
 -- ----------------------------
-INSERT INTO `science_works` VALUES (1, '当面付设计', '1', '1', '1', '2019-01-29', '1', NULL, '2019-01-29 06:54:20', '2019-01-29 06:54:20');
+INSERT INTO `science_works` VALUES (1, '当面付设计', '1', '1', '1', '2019-01-29', '1', '0000', '2019-01-29 06:54:20', '2019-01-29 06:54:20');
 INSERT INTO `science_works` VALUES (2, '收银宝系统', '2', '1', '1', '2019-02-25', '2', '00', '2019-02-25 06:32:00', '2019-02-25 06:32:00');
 
 -- ----------------------------
@@ -1159,7 +1312,8 @@ CREATE TABLE `sciences`  (
 DROP TABLE IF EXISTS `teachers`;
 CREATE TABLE `teachers`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '教师编号',
-  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '教师姓名',
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '邮箱',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '登录名',
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '登录密码',
   `sex` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '性别',
   `job_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '职称',
@@ -1167,14 +1321,16 @@ CREATE TABLE `teachers`  (
   `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '联系电话',
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
+  `remember_token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of teachers
 -- ----------------------------
-INSERT INTO `teachers` VALUES (1, '万小型', '123456', '1', '讲师', 'php', '15844460823', '2019-01-04 03:30:18', '2019-01-24 07:33:59');
-INSERT INTO `teachers` VALUES (2, '郭小鹏', 'admin', '1', '讲师', 'java', '15844460823', '2019-02-21 00:32:51', '2019-02-21 00:32:51');
+INSERT INTO `teachers` VALUES (1, 'wanxx@qq.com', '万小型', '$2y$10$eHPgethuuOD1RuX1UYJq1Orw64y4vsGf5XfV91EgBuDBkx/lByWqO', '1', '讲师', 'php', '15844460823', '2019-01-04 03:30:18', '2019-03-19 03:07:59', 'qbViqU1Grxhno5obd0K5CIwqpoqqVFZGn0HVPyLzobuEN8ByUl5nF5D1GwYC');
+INSERT INTO `teachers` VALUES (2, 'guopeng@qq.com', '郭小鹏', '$2y$10$eHPgethuuOD1RuX1UYJq1Orw64y4vsGf5XfV91EgBuDBkx/lByWqO', '1', '讲师', 'java', '15844460823', '2019-02-21 00:32:51', '2019-03-19 03:07:20', NULL);
+INSERT INTO `teachers` VALUES (3, '123@qq.com', '万燧', '$2y$10$a.cw.rfHXOfAk1JHt0SJ6eP5sz5OSpV5weQURRTU11Z3/K5NUZdG.', '0', '讲师', 'python', '15844460823', '2019-03-19 03:00:17', '2019-03-19 03:00:17', NULL);
 
 -- ----------------------------
 -- Table structure for teaching_works
