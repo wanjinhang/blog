@@ -22,6 +22,7 @@ class CreateTeachersTable extends Migration
             $table->string('job_title')->comment('职称');
             $table->string('content')->comment('备注/研究方向');
             $table->string('phone')->comment('联系电话');
+            $table->string('remember_token');
             $table->timestamps();
         });
     }
